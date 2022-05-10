@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table cellpadding="10" cellspacing="0">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <th>
+            <input id="A" type="text" style="height: 30px">
+        </th>
+        <th>
+            <select id="From" style="height: 30px">
+                <option value="vnd"> VNĐ </option>
+                <option value="usd"> USD </option>
+            </select>
+        </th>
+        <th>
+            <select id="To" style="height: 30px;">
+                <option value="usd"> USD </option>
+                <option value="vnd"> VNĐ </option>
+            </select>
+        </th>
+        <th><button type="button" style="height: 30px;" onclick="myFunction()">Convert</button> </th>
+    </tr>
+
+
+
+
+</table>
+<p id="ketqua">0</p>
+</body>
+</html>
+<script>
+    function myFunction() {
+        let A = document.getElementById('A').value;
+        let From = document.getElementById('From').value;
+        let To = document.getElementById('To').value;
+        let result;
+        if(From == 'vnd'  && To == 'usd'){
+            result = A / 23000 ;
+        }else if(From == 'usd' && To == 'vnd'){
+
+        result = A * 23000;
+        }else if(From == 'usd'){
+            result= A ;
+
+        }else {
+            result=A ;
+        }
+document.getElementById('ketqua').innerHTML = result;
+    }
+</script>
