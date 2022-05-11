@@ -1,4 +1,0 @@
-function xinchao () {
-    alert(xinchao) ;
-
-}
