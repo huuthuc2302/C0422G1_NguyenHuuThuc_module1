@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của học sinh</title>
+</head>
+<body>
+    <script>
+        let a =prompt('điểm bài kiểm tra')
+        let b =prompt('điểm thi giữa kỳ')
+        let c =prompt('điểm thi cuối kỳ')
+        let d = (parseInt(a) + parseInt(b) + parseInt(c))/3
+        if (d <= 10 && d >=9){
+            alert('học sinh đạt loại giỏi')
+        }else if (d >= 7){
+            alert('học sinh đạt loại khá')
+        }else if (d >= 5){
+            alert('học sinh đạt loạ trung bình')
+        }else {
+            alert('học sinh đạt loại ngu')
+        }
+    </script>
+</body>
+</html>

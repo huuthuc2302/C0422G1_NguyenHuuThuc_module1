@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>MÁY TÍNH</h1>
+<br>
+<br>
+<input type="text" id="nhapso"><br>
+    <tr>
+        <td><button name="so" type="button" value="1" onclick=" nhap() ">1</button></td>
+        <td><button name="so" type="button" value="2" onclick=" nhap() ">2</button></td>
+        <td><button name="so" type="button" value="3" onclick=" nhap() ">3</button></td>
+        <td><button name="so" type="button" value="+" onclick=" nhap() ">+</button></td>
+
+    </tr><br>
+    <tr>
+        <td><button name="so" type="button" value="4" onclick="showMessage(this.value)">4</button></td>
+        <td><button name="so" type="button" value="5" onclick=" nhap() ">5</button></td>
+        <td><button name="so" type="button" value="6" onclick=" nhap() ">6</button></td>
+        <td><button name="so" type="button" value="-" onclick=" nhap() ">-</button></td>
+    </tr><br>
+    <tr>
+        <td><button name="so" type="button" value="7" onclick="nhap() ">7</button></td>
+        <td><button name="so" type="button" value="8" onclick=" nhap() ">8</button></td>
+        <td><button name="so" type="button" value="9" onclick=" nhap() ">9</button></td>
+        <td><button name="so" type="button" value="*" onclick=" nhap() ">*</button></td>
+    </tr><br>
+    <tr>
+        <td><button type="button" value="C" onclick=" nhap() ">C</button></td>
+        <td><button type="button" value="0" onclick=" nhap() ">0</button></td>
+        <td><button type="button" value="=" onclick=" nhap() ">=</button></td>
+        <td><button type="button" value="/" onclick=" nhap() ">/</button></td>
+    </tr>
+</body>
+</html>
+<script>
+    let view = document.getElementById('nhapso').value;
+    function showMessage(value) {
+
+        view.value += value ;
+    }
+
+</script>
