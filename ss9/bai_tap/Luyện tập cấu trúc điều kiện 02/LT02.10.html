@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính giá điện</title>
+</head>
+<body>
+    <script>
+        // + 100KW đầu tiên, mỗi chữ điện phải trả 1500đồng
+        // + từ 101 số trở lên, mỗi số phải trả 3000 đồng
+        let dien = parseFloat(prompt("nhập chữ điện (kW)"));
+        let tien;
+        if (dien<=100){
+            tien = dien * 1500;
+        } else {
+            tien = (1500*100) + ((dien-100)*3000);
+        }
+        document.write('Tiền điện tháng này: ' + tien);
+    </script>
+</body>
+</html>

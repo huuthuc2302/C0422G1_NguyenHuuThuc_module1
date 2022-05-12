@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt('nhập số a'))
+        let b = parseFloat(prompt('nhập số b'))
+        let c = parseFloat(prompt('nhập số c'))
+        let d = (b*b)-4*a*c
+        if (d<0){
+            alert('Phương trình vô nghiệm')
+        }else if (d==0) {
+            alert('Phương trình có nghiệm kép x = :' + (-b)/(2*a))
+        }else
+            alert("x1=" + ((-b + math.sqrt(d))/2*a) + "Và" + "x2" + ((-b - math.sqrt(d))/2*a))
+    </script>
+</body>
+</html>
