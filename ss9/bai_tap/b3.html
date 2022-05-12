@@ -3,44 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        div{
+
+            text-align: center;
+            margin: 100px auto;
+            background-color: #9B9E9E;
+
+            width: 650px;
+
+
+            box-shadow: 5px 5px 5px;
+        }
+        button{
+            width: 80px;
+            height: 30px;
+            border: 3px solid black;
+            box-shadow: 1px 1px 3px ;
+            background-color: white;
+
+        }
+        input{
+            width: 600px;
+            height: 50px;
+
+            box-shadow: 2px 2px 5px;
+        }
+    </style>
 </head>
 <body>
-<h1>MÁY TÍNH</h1>
-<br>
-<br>
-<input type="text" id="nhapso"><br>
-    <tr>
-        <td><button name="so" type="button" value="1" onclick=" nhap() ">1</button></td>
-        <td><button name="so" type="button" value="2" onclick=" nhap() ">2</button></td>
-        <td><button name="so" type="button" value="3" onclick=" nhap() ">3</button></td>
-        <td><button name="so" type="button" value="+" onclick=" nhap() ">+</button></td>
+<div>
+    <table cellspacing="10" cellpadding="0">
+        <tr>
+            <th colspan="7">
+                <input type="text" id="number">
 
-    </tr><br>
-    <tr>
-        <td><button name="so" type="button" value="4" onclick="showMessage(this.value)">4</button></td>
-        <td><button name="so" type="button" value="5" onclick=" nhap() ">5</button></td>
-        <td><button name="so" type="button" value="6" onclick=" nhap() ">6</button></td>
-        <td><button name="so" type="button" value="-" onclick=" nhap() ">-</button></td>
-    </tr><br>
-    <tr>
-        <td><button name="so" type="button" value="7" onclick="nhap() ">7</button></td>
-        <td><button name="so" type="button" value="8" onclick=" nhap() ">8</button></td>
-        <td><button name="so" type="button" value="9" onclick=" nhap() ">9</button></td>
-        <td><button name="so" type="button" value="*" onclick=" nhap() ">*</button></td>
-    </tr><br>
-    <tr>
-        <td><button type="button" value="C" onclick=" nhap() ">C</button></td>
-        <td><button type="button" value="0" onclick=" nhap() ">0</button></td>
-        <td><button type="button" value="=" onclick=" nhap() ">=</button></td>
-        <td><button type="button" value="/" onclick=" nhap() ">/</button></td>
-    </tr>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" name="nut" value="Rad" onclick="inputValue(this.value)">Rad</button>
+            </td>
+            <td>
+                <button type="button" >...</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="x!" onclick="inputValue(this.value)">x!</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="(" onclick="inputValue(this.value)">(</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value=")" onclick="inputValue(this.value)">)</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="%" onclick="inputValue(this.value)">%</button>
+            </td>
+            <td>
+                <button type="button" onclick="xoa();">AC</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" name="Inv" value="Rad" onclick="inputValue(this.value)">Inv</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="sin" onclick="inputValue(this.value)">sin</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="Ln" onclick="inputValue(this.value)">Ln</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="7" onclick="inputValue(this.value)">7</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="8" onclick="inputValue(this.value)">8</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="9" onclick="inputValue(this.value)">9</button>
+            </td>
+            <td>
+                <button  type="button" name="tinh" value="/" onclick="inputValue(this.value)">/</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="button" name="nut" value="pi" onclick="inputValue(this.value)">pi</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="cos" onclick="inputValue(this.value)">cos</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="Log" onclick="inputValue(this.value)">Log</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="6" onclick="inputValue(this.value)">6</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="5" onclick="inputValue(this.value)">5</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="4" onclick="inputValue(this.value)">4</button>
+            </td>
+            <td>
+                <button type="button" name="tinh" value="*" onclick="inputValue(this.value)">*</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" name="nut" value="E" onclick="inputValue(this.value)">E</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="Tan" onclick="inputValue(this.value)">tan</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="√" onclick="inputValue(this.value)">√</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="1" onclick="inputValue(this.value)">1</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="2" onclick="inputValue(this.value)">2</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="3" onclick="inputValue(this.value)">3</button>
+            </td>
+            <td>
+                <button type="button" name="tinh" value="-" onclick="inputValue(this.value)">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" name="nut" value="Ans" onclick="inputValue(this.value)">Ans</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="EXP" onclick="inputValue(this.value)">EXP</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="x&ordf;" onclick="inputValue(this.value)">x&ordf;</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="0" onclick="inputValue(this.value)">0</button>
+            </td>
+            <td>
+                <button type="button" name="nut" value="." onclick="inputValue(this.value)">.</button>
+            </td>
+            <td>
+                <button type="button" name="ketqua" onclick="ketqua();">=</button>
+            </td>
+            <td>
+                <button type="button" name="tinh" value="+" onclick="inputValue(this.value)">+</button>
+            </td>
+        </tr>
+    </table>
+
+</div>
+<script>
+    let view = document.getElementById("number");
+    function inputValue(value) {
+        view.value += value;
+    }
+    function ketqua() {
+        let ketqua = eval(view.value);
+        view.value = ketqua;
+    }
+    function xoa() {
+        view.value="";
+    }
+</script>
 </body>
 </html>
-<script>
-    let view = document.getElementById('nhapso').value;
-    function showMessage(value) {
-
-        view.value += value ;
-    }
-
-</script>
