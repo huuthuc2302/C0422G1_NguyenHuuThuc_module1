@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con)
+        khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</title>
+</head>
+<body>
+<input type="number" id="tienv" placeholder="Nhập số tiền vay"> <br>
+<input type="number" id="thangv" placeholder="Nhập số tháng vay"> <br>
+<input type="number" id="laith" placeholder="Nhập lãi vay theo tháng"> <br>
+<button type="button" onclick="sol()">Tính lãi</button>
+<p id="ketqua"></p>
+<script>
+    function sol() {
+        var th=parseInt( document.getElementById('thangv').value);
+        var tv= parseInt( document.getElementById('tienv').value);
+        var i=(document.getElementById('laith').value);
+        var count=1;
+
+        while (count <= th) {
+            tv = tv + (tv * i /100);
+            count++
+        } document.getElementById("ketqua").innerText= "Tổng gốc lãi phải trả là: " + tv
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hình chữ nhật</title>
+</head>
+<body>
+<script>
+    let dai= prompt("Nhập chiều dài")
+    let rong = prompt("Nhập chiều rộng")
+    for (let i=1; i<=rong; i++){
+        for (let j=1; j<=dai;j++){
+            if( j != 1 && j != dai && i!=1 && i!=rong) {
+                document.write("&nbsp&nbsp")
+            } else {
+                document.write("*")
+                if (j==dai) {
+                    document.write("<br>")
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
