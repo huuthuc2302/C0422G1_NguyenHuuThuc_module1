@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+    <button type="button" onclick="play()">PLAY </button>
+    <script>
+        function play() {
+            let rang = prompt("Nhập khoảng số mà bạn muốn đoán")
+            let range= Math.floor(Math.random()*rang)
+            for( let i=1;i<=3;i++){
+                let guess = prompt('Nhập số bạn đoán')
+                if( guess == range){
+                    alert('Chúc mừng bạn đã đoán đúng');
+                    break;
+                }
+                else if ( guess < range){
+                    alert('Bạn cần đoán lớn hơn')
+                } else
+                    alert('Bạn cần đoán nhỏ hơn')
+            }document.write('Bạn đã hết lượt chơi')
+
+
+        }
+    </script>
+</body>
+</html>
