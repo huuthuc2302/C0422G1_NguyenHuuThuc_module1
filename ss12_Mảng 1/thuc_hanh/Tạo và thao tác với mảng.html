@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+<body>
+<label> Sample Screen:</label>
+<input type="text" id="textadd">
+<button type="button" onclick="add()">ADD</button>
+<button type="button" onclick="display()">Display</button><hr/>
+<p id="result"></p>
+<script>
+    let arr= Array()
+    function add() {
+    arr.push(document.getElementById("textadd").value)
+        document.getElementById("textadd").value=""
+    }
+    function display() {
+    let e=""
+        for (let i=0; i<arr.length;i++){
+            e = e + "Element "+ i + "="+ arr[i] +"<br>"
+    }document.getElementById("result").innerHTML=e}
+</script>
+</body>
+</html>

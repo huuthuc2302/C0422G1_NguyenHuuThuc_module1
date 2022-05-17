@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược các phần tử trong mảng</title>
+</head>
+<body>
+    <script>
+        let x = [1,2,3,4,];
+        let indexdautien =0;
+        let indexcuoi = x.length -1;
+        for (let i=0;i<indexcuoi;i++)
+        {
+        // while (first<last){
+            let b = x[indexdautien];
+            x[indexdautien]=x[indexcuoi];
+            x[indexcuoi]=b;
+            indexdautien++;
+            indexcuoi--;
+        }
+        document.write(x)
+    </script>
+</body>
+</html>
