@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+<!--    Viết chương trình khởi tạo/nhập vào một mảng số nguyên -->
+<!--    và đảo ngược các phần tử trong mảng đó.-->
+</head>
+<body>
+    <script>
+        //nhập từ bàn phím và in ra mảng
+        let num = prompt('nhap độ dài mảng')
+        let arr = [];//khai báo mảng rỗng
+        let i ;
+        for(i= 0 ; i <num ; i++){
+            arr[i] = prompt('nhập giá trị phần tử trog mảng')
+        }document.write('arr = [ '+arr+'] <br/>') // in ra mảng vừa nhập
+        let first = 0;
+        let last = arr.length -1
+        while (first<last){
+            let b = arr[first]
+            arr[first] = arr[last]
+            arr[last] = b
+            first++;
+            last-- ;
+        }document.write('đảo ngược mảng <br> arr = ['+arr+']')
+    </script>
+</body>
+</html>
