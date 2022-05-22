@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 1</title>
+<!--    Nhập 1 chuỗi bất kì và 1 kí tự.-->
+<!--    Đếm số lần xuất hiện của kí tự đó trong chuỗi-->
+</head>
+<body>
+    <script>
+        let str = prompt(" Nhập số phần tử của mảng")
+        let arr= str.split("")
+        let count = 0
+        let a = prompt(" Nhập 1 ký tự ")
+        for (let j = 0 ; j < arr.length  ; j++){
+            if (arr[j] === a){
+                count++
+            }
+        }document.write(arr + "<br>")
+        document.write("Phần tử " + a + " có " + count + " lần xuất hiện trong chuỗi")
+
+        // let str= prompt(" Nhập số phần tử của mảng ");
+        // let arr = [];
+        // let a = prompt(" Nhập 1 ký tự ")
+        // let count=0;
+        // for (let i = 0; i< str; i++){
+        //     arr[i] = prompt(" Nhập các phần tử trong mảng " + i)
+        //     if (arr[i]== a ){
+        //         count++
+        //     }
+        // }alert("Phần tử " + a + " có " + count + " lần xuất hiện trong chuỗi" )
+    </script>
+</body>
+</html>

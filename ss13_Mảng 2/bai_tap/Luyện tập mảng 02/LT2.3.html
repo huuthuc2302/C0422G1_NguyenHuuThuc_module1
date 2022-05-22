@@ -8,19 +8,30 @@
 </head>
 <body>
     <script>
-        let array = []
+        // let array = []
+        // let count = 0
+        // let length = prompt("Nhập kích thước của mảng")
+        // for (let i = 0; i < length; i++) {
+        //     array[i] = prompt("Nhập vào giá trị phần tử " + i)
+        // }
+        // document.write("Array = [" + array + " ]" + "<br>")
+        // for (let i = 0; i < length; i++) {
+        //     if ((array[i] / array[i]) == 1) {
+        //         count++
+        //     }
+        // }
+        // document.write("Số ký tự số trong mảng là " + count)
+        let str = prompt(" Nhập kích thước của mảng")
+        let arr = []
         let count = 0
-        let length = prompt("Nhập kích thước của mảng")
-        for (let i = 0; i < length; i++) {
-            array[i] = prompt("Nhập vào giá trị phần tử " + i)
-        }
-        document.write("Array = [" + array + " ]" + "<br>")
-        for (let i = 0; i < length; i++) {
-            if ((array[i] / array[i]) == 1) {
+
+        for (let i=0 ;i<str ; i++){
+            arr[i]=prompt("Nhập vào giá trị phần tử "+ i)
+            if (arr[i]%arr[i]==0){
                 count++
             }
-        }
-        document.write("Số ký tự số trong mảng là " + count)
+        }document.write(count)
+
     </script>
 </body>
 </html>

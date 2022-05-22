@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 3</title>
+<!--    Viết chương trình cho người dùng nhập vào 1 số nguyên bất kì.-->
+<!--    Hiển thị các số KHÔNG phải số nguyên tố từ 0 đến số người dùng nhập vào-->
+</head>
+<body>
+    <script>
+        let str = prompt(" Nhập số nguyên bất kì")
+        for(let i=0 ; i <= str ; i++) {
+            if (i === 0 || i === 1) {
+                document.write(i + '<br>')
+            }
+                for (let j = 2; j < i ; j++) {
+                    if (i % j === 0) {
+                        document.write(i + '<br>')
+                        break;
+                    }
+                }
+
+            }
+
+    </script>
+</body>
+</html>
