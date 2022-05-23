@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 5</title>
+<!--    Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
+</head>
+<body>
+    <script>
+        // function random() {
+        //     let a = [5,9,3]
+        //     let min = a[0]
+        //     for (let i = 0 ; i < a.length ; i++){
+        //         if(a[i]<a[0]){
+        //             min = a[i]
+        //         }
+        //     }
+        //     document.write(min + " là số nhỏ nhất")
+        // }
+        // random()
+        function abc() {
+            let a = prompt(" Nhập số a vào")
+            let b = prompt(" Nhập số b vào")
+            let c = prompt(" Nhập số c vào")
+            let min ;
+            if (a > b && c > b){
+                min = b
+            }
+            if (a < b && a < c){
+                min = a
+            }
+            if ( a > c && b > c){
+                min = c
+            }document.write(min + " là số nhỏ nhất")
+        }
+        abc()
+    </script>
+</body>
+</html>

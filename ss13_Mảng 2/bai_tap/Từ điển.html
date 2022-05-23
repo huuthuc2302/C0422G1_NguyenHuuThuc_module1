@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<p>Dịch Từ</p>
+<input type="text" id="box1" placeholder="tiếng việt sang tiếng anh" style="width: 200px">
+<button type="button" onclick="trans()">Dịch</button>
+<p id="result"></p>
+<script>
+    function trans() {
+        var str=document.getElementById("box1").value;
+        var arrEng=['Book', 'Chair', 'telephone', 'Pen', 'Car']
+        var arrVn=[ 'sách', 'ghế', 'điện thoại', 'bút', 'ô tô']
+        for (var i=0; i<arrVn.length;i++)   {
+            if (str == arrVn[i]){
+                document.getElementById("result").innerHTML= arrEng[i]
+                break;
+            } else  document.getElementById("result").innerText= "Từ này không có trong từ điển"
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 9</title>
+<!--    Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.-->
+<!--    Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.-->
+</head>
+<body>
+    <script>
+        // let str = prompt("Nhập vào chuỗi bất kỳ")
+        // let arr = str.split("")
+        // let a = prompt("Nhập 1 kí tự")
+        // let count = 0
+        // function abc(str,a) {
+        //     for ( let i = 0 ; i < arr.length ; i++){
+        //         if (a===arr[i]){
+        //             count++
+        //         }
+        //     }document.write(a + ' xuất hiện trong mảng ' +count+' lần')
+        //     if (count === 0){
+        //         alert('-1')
+        //     }
+        //
+        // }
+        // abc(str,a)
+        let length = prompt('nhập độ dài của mảng')
+        let arr = []
+        function showMessage() {
+            // nhập và xuất mảng
+              for (let i = 0 ; i < length ; i++){
+                  arr[i] = prompt('nhập giá trị của mảng')
+              }document.write('arr = [ '+ arr + ' ] <br>')
+            let check = prompt('nhập kí tự bất kì')
+            let count = 0 ;
+              //tìm xem kí tự có trong mảng k
+            for (let j = 0 ; j < arr.length ; j++){
+                if (check === arr[j]){
+                    count++
+                }
+            }document.write(check + ' xuất hiện '+ count + ' lần ')
+            if (count === 0 ){
+                alert('-1')
+            }
+        }
+        showMessage()
+    </script>
+</body>
+</html>
