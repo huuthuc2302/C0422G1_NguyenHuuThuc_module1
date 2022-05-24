@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor(celsius,fahrenheit) {
+                this.celsius = celsius
+                this.fahrenheit = fahrenheit
+            }
+            getCelsius (){
+                return this.celsius
+            }
+            getFahrenheit (){
+                return this.fahrenheit
+            }
+            getDcsf (){
+                return (this.celsius *1.8) + 32
+            }
+            getDcsk (){
+                return this.celsius + 273.15
+            }
+        }
+        let temperature = new Temperature(25,0)
+        let celsius = temperature.getCelsius()
+        let fahrenheit = temperature.getFahrenheit()
+        let dcsf = temperature.getDcsf()
+        let dcsk = temperature.getDcsk()
+        document.write("Độ C sang F là : "+ dcsf + "<br>" + " Độ C sang K là : " + dcsk)
+    </script>
+</body>
+</html>

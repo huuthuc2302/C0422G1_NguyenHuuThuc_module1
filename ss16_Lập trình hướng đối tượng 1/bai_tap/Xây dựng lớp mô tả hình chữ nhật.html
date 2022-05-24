@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+    <script>
+        class Rectangle {
+            constructor(width, length) {
+                this.width = width
+                this.length = length
+            }
+            getWidth (){
+                return this.width;
+            }
+            getLength(){
+                return this.length;
+            }
+            getPerimeter(){
+                return (this.width + this.length) * 2
+            }
+            getArea(){
+                return this.length * this.width
+            }
+        }
+        let rectangle = new Rectangle(15,30)
+        let width =  rectangle.getWidth(15);
+        let length = rectangle.getLength(30);
+        let perimeter = rectangle.getPerimeter();
+        let area = rectangle.getArea();
+        document.write("Với chiều rộng = "+ width + " và chiều dài = "+ length + " thì : <br>")
+        document.write("Diện tích hình chữ nhật: " + area + " <br> " + " Chu vi hình chữ nhật : " + perimeter)
+    </script>
+</body>
+</html>

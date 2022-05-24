@@ -8,15 +8,15 @@
 </head>
 <body>
     <script>
-        function math() {
-            let num= prompt('Nhập số tính giai thưa')
-            let x = 1 ;
+        let num= prompt('Nhập số tính giai thưa')
+        let x = 1 ;
+        function math(num) {
             for ( let y = 1 ; y<=num ; y++){
                 x=x*y
             }
             alert(num + '! là: ' + x )
         }
-        math()
+        math(num)
     </script>
 </body>
 </html>

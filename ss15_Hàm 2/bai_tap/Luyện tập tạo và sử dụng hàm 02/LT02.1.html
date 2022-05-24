@@ -8,12 +8,12 @@
 </head>
 <body>
     <script>
-        function squaring() {
-            let number = parseInt(prompt("Nhập 1 số vào"))
-            let squar = number*number
+        let number = parseInt(prompt("Nhập 1 số vào"))
+        let squar = number*number
+        function squaring(number) {
             alert("Bình phương của " + number + " = " + squar)
         }
-        squaring();
+        squaring(number);
     </script>
 </body>
 </html>

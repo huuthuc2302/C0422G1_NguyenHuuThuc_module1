@@ -18,11 +18,11 @@
         //     document.write(min + " là số nhỏ nhất")
         // }
         // random()
-        function abc() {
-            let a = prompt(" Nhập số a vào")
-            let b = prompt(" Nhập số b vào")
-            let c = prompt(" Nhập số c vào")
-            let min ;
+        let a = prompt(" Nhập số a vào")
+        let b = prompt(" Nhập số b vào")
+        let c = prompt(" Nhập số c vào")
+        let min ;
+        function abc(min) {
             if (a > b && c > b){
                 min = b
             }
@@ -33,7 +33,7 @@
                 min = c
             }document.write(min + " là số nhỏ nhất")
         }
-        abc()
+        abc(min);
     </script>
 </body>
 </html>

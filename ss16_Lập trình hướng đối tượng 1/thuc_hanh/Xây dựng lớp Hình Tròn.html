@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Circle {
+            constructor(radius) {
+                this.radius = radius;
+            }
+            getRadius(){
+                return this.radius;
+            }
+            getArea(){
+                return this.radius * this.radius * 3.14
+            }
+        }
+        let circle = new Circle(15)
+        let radius = circle.getRadius();
+        let area = circle.getArea()
+        alert("Diện tích hình tròn" + area)
+    </script>
+</body>
+</html>

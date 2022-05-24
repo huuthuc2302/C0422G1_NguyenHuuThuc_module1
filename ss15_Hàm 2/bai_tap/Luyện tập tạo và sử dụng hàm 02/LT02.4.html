@@ -8,30 +8,15 @@
 </head>
 <body>
     <script>
-        function abc() {
-            let number = prompt("Nhập bất kì")
+        let number = prompt("Nhập bất kì")
+        function abc(number) {
             if (!isNaN(number)){
                 return true ;
             } else {
                 return false ;
             }
         }
-        alert(abc())
+        alert(abc(number))
     </script>
 </body>
 </html>
-
-
-
-
-// function abc() {
-//     let num = prompt("Nhập bất kì")
-//     for (i = 0 ; i < num ; i++){
-//         if (num[i]/num[i]=1){
-//             alert("true")
-//         }else{
-//             alert("false")
-//         }
-//     }
-// }
-// abc()
