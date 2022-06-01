@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Viết một hàm chuẩn hóa xâu ký tự:-->
+<!--    biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau-->
+<!--    và bắt đầu mỗi từ phải in hoa.-->
+<!--    Ví dụ tRuong    TaN   HAI => Truong Tan Hai.-->
+<!--    -->
+<!--    Và một hàm tìm từ dài nhất trong 1 xâu ký tự.-->
+<!--    Hàm main sử dụng các hàm này để nhập xâu ký tự từ bàn phím,-->
+<!--    in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.-->
+
+</head>
+<body>
+    <script>
+        let x = prompt('Nhập 1 chuỗi')
+        document.write(x +'<br>');
+
+        x = x.trim().toLowerCase();
+        let arr = x.split('');
+        arr[0] = arr[0].toUpperCase()
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]===' ' && arr[i-1]===' '){
+                arr.splice(i,1);
+            }
+            if (arr[i-1] === ' ' && arr[i] !== ' '){
+                arr[i]=arr[i].toUpperCase()
+            }
+        }
+        document.write(arr.join('')+ '<br>')
+
+        let arr2 = arr.join('').split(' ');
+        let max =arr2[0].length;
+        let index = 0;
+        for (let i = 1; i < arr2.length ; i++) {
+            if (arr2[i].length > max) {
+                max = arr2[i].length;
+                index = i;
+            }
+        }
+        document.write('Phần tử dài nhất là '+arr2[index] + 'có index ' + index);
+
+    </script>
+</body>
+</html>

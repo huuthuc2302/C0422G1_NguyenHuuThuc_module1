@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ.-->
+<!--    Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.-->
+</head>
+<body>
+    <script>
+        let number = [0,1,2,3,4,5,6];
+        let words = ['không', 'một', 'hai', 'ba', 'bốn', 'năm', 'sáu',];
+        let y = prompt('Nhập 1 số');
+        let arrY = y.split('');
+        let result = [];
+        for (let i = 0; i < arrY.length; i++) {
+            for (let j = 0; j < number.length; j++) {
+                if (number[j] == arrY[i]) {
+                    result += words[j] + [];
+                    break;
+                }
+            }
+        }
+        document.write('Số mới nhập là ' + y + '<br>');
+        document.write('kết quả là  ' + result + '<br>');
+    </script>
+</body>
+</html>

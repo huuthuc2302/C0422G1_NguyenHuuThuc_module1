@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <button type="button" onclick="myOder()" style="width: 100px">Oder</button>
+</div>
+    <script>
+        let myMenu = ["Cafe","Cam Vắt","Nước ép cà rốt","Nước ép cà chua","Nước lọc","Nước dừa"]
+        let numOder = [1,2,3,4,5,6]
+        let price = [20000,30000,25000,25000,10000,40000]
+        for (let i = 0; i < myMenu.length ; i++) {
+            document.write(numOder[i] + ". " + myMenu[i] + "<br>")
+        }
+        function myOder() {
+            let myOder
+            let quantity
+            let price2
+            let name
+            let sum = 0
+            do {
+                let volume = 0
+                myOder = +prompt("bạn muốn uống gì ?")
+                if (myOder == 7){
+                    alert("tổng bill " + sum + " VNĐ")
+                    break;
+                }else {
+                    for (let i = 0; i < numOder.length; i++) {
+                        if (myOder === numOder[i]){
+                            alert(myMenu[i] + " có giá " + price[i] + " VNĐ" )
+                            price2 = price[i]
+                            name = myMenu[i]
+                        }
+                    }
+                    quantity = +prompt("bạn muốn uống mấy ly " + name)
+                    volume = quantity * price2
+                    alert(quantity + " ly " + name + " có giá " + volume + " VNĐ" )
+                    sum += volume
+                }
+            } while (myOder !== 7)
+        }
+    </script>
+</body>
+</html>

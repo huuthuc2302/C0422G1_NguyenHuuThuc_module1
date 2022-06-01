@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Cho 2 mảng A và B chứa số nguyên.-->
+<!--    Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B-->
+<!--    nhưng lại không xuất hiện A-->
+<!--    Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện-->
+<!--    Ví dụ:  A=[7,2,5,3,5,3] và B=[7,2,5,4,6,3,5,3] thì kết quả missingValue(A, B) = [4, 6]-->
+</head>
+<body>
+    <script>
+        let i ;
+        let arrA = prompt('Nhập độ dài của mảng A')
+        let A = []
+        for ( i = 0 ; i < arrA ; i++){
+            A[i] = prompt('Nhập phần tử của mảng A tại vị trí ' + i )
+        }document.write(' A = [ '+A+ ' ] <br>')
+
+        let j ;
+        let arrB = prompt('Nhập độ dài của mảng B')
+        let B = []
+        for ( j = 0 ; j < arrB ; j++){
+            B[j] = prompt('Nhập phần tử của mảng B tại vị trí ' + j )
+        }document.write(' B = [ '+ B + ' ] <br>')
+
+        let C = []
+        for (let z = 0 ; z < B.length ; z++){
+            if (A.indexOf(B[z]) === -1 ){      //dùng hàm indexof   :
+                if (C.indexOf(B[z]) === -1)
+                    C.push(B[z])
+            }
+        }document.write('<p> C = [ '+ C + ' ] </p>')
+    </script>
+</body>
+</html>
